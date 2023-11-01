@@ -3,11 +3,24 @@ server:
 spring:
   application:
     name: gateway
+  security:
+    oauth2:
+      client:
+        provider:
+          gateway-service:
+            issuer-uri: http://localhost:8089/realms/fir
+        registration:
+          gateway-service:
+            client-id: api-gateway
+            client-secret: ZcvXUMw0HYGqk6gSMubjxyyOlPFQwd6Z
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8090/login/oauth2/code/keycloak
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
+      default-filters: TokenRelay
       routes:
         - id: catalogRoute
           uri: lb://catalog-service/
