@@ -14,7 +14,7 @@ spring:
             client-id: api-gateway
             client-secret: ZcvXUMw0HYGqk6gSMubjxyyOlPFQwd6Z
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8090/login/oauth2/code/keycloak
+            redirect-uri: http://gateway:8090/login/oauth2/code/keycloak
   cloud:
     gateway:
       discovery:
