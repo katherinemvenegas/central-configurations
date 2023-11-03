@@ -8,7 +8,7 @@ spring:
       client:
         provider:
           gateway-service:
-            issuer-uri: http://localhost:8089/realms/fir
+            issuer-uri: http://dazzling_aryabhata:8089/realms/fir
         registration:
           gateway-service:
             client-id: api-gateway
