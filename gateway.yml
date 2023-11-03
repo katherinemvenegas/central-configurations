@@ -3,18 +3,6 @@ server:
 spring:
   application:
     name: gateway
-  security:
-    oauth2:
-      client:
-        provider:
-          gateway-service:
-            issuer-uri: http://dazzling_aryabhata:8089/auth/realms/fir
-        registration:
-          gateway-service:
-            client-id: api-gateway
-            client-secret: ZcvXUMw0HYGqk6gSMubjxyyOlPFQwd6Z
-            authorization-grant-type: authorization_code
-            redirect-uri: http://gateway:8090/login/oauth2/code/keycloak
   cloud:
     gateway:
       discovery:
